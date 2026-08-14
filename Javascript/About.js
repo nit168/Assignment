@@ -480,8 +480,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 // Go to Contact Us
-                window.location.href =
-                    "contact.html";
+                window.location.href ="contact.html";
 
             }
         );

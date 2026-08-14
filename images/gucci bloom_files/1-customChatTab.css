@@ -1,0 +1,305 @@
+.inside-mobile-device body.inside-chatv2-open > div#page,
+.inside-mobile-device body.inside-chatv2-open > footer#footer-main {
+  display: block !important;
+}
+
+#inside_holder[device="3"] {
+  --inside-pane-right: 16px !important;
+}
+
+#inside_tabs .inside_chatTabImage {
+  width: 65px !important;
+}
+
+#insideChatFrame {
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.04) !important;
+}
+
+#inside_holder:not(.videoChat) #insideChatFrame.newtransition {
+  transition: all cubic-bezier(0.5, 0, 0, 1) 400ms !important;
+  transform: translateY(0%) !important;
+  top: calc(var(--inside-viewport-height, 100vh) - var(--inside-header-height, 50px) - var(--inside-vertical-offset, 0px) + var(--data-move-y, 0px)) !important;
+  right: calc(var(--inside-pane-right, auto) + var(--inside-pane-offset-right, 0px) - var(--data-move-x, 0px));
+  display: block !important;
+}
+
+#inside_holder #insideChatFrame.newtransition.notransition {
+    transition: none !important;
+}
+
+#inside_holder:not(.videoChat):not(.keyboardOpen) #insideChatFrame.newtransition {
+  height: var(--inside-header-height, 50px) !important;
+}
+
+#inside_holder:not(.videoChat) #insideChatFrame.newtransition:not(.fromNotification) {
+  width: 64px !important;
+  min-width: 64px !important;
+}
+
+#inside_holder:not(.videoChat) #insideChatFrame.newtransition.open {
+  top: calc(var(--inside-viewport-height, 100vh) - var(--inside-pane-height, 650px)  - var(--inside-vertical-offset, 0px) - 8px + var(--data-move-y, 0px)) !important;
+  width: var(--inside-chatpane-width, 400px) !important;
+  right: calc(var(--inside-pane-right, auto) + var(--inside-pane-offset-right, 0px) - var(--data-move-x, 0px));
+}
+
+#inside_holder:not(.videoChat):not(.keyboardOpen) #insideChatFrame.newtransition.open {
+  height: var(--inside-pane-height, 650px) !important;
+}
+
+#inside_holder:not(.videoChat).keyboardOpen #insideChatFrame.newtransition.open{
+  top: calc(var(--inside-pane-top, 0px) - var(--inside-pane-offset-bottom, 0px)) !important;
+}
+
+body.inside-chatv2-open #inside_holder[device="3"] #insideChatFrame {
+  max-height: none !important;
+}
+
+body #inside_holder.mobile-device #insideChatFrame.newtransition {
+  left: auto !important;
+  right: calc(16px - var(--data-move-x, 0px)) !important;
+}
+
+body #inside_holder.mobile-device #insideChatFrame.newtransition.fromNotification {
+  width: var(--inside-chatpane-width, 300px) !important;
+}
+
+body #inside_holder.mobile-device #insideChatFrame.newtransition.open {
+  top: 0 !important;
+  width: 100vw !important;
+  left: auto !important;
+  right: 0 !important;
+}
+
+body #inside_holder.mobile-device:not(.keyboardOpen) #insideChatFrame.newtransition.open {
+  height: calc(var(--inside-viewport-height, 100vh) - env(safe-area-inset-bottom, 20px)) !important;
+}
+
+#inside_holder.mobile-device.chatPaneOpen #insideChatFrame,
+#inside_tabs.transition {
+  transition: transform cubic-bezier(0.5, 0, 0, 1) 400ms;
+}
+
+#inside_tabs {
+  transform: translate(var(--data-move-x), var(--data-move-y));
+}
+
+#inside_holder #insideChatFrame.notificationMode,
+#insideCustomChatTab.expanded .messageCounter,
+.inside-chatv2-open #usntA42Toggle, 
+#inside_holder #inside_liveChatTab,
+#inside_tabs.hidden,
+#inside_holder.tabHidden #inside_tabs,
+#inside_holder:not(.chatTabVisible) #insideCustomChatTab,
+#inside_holder.chatPaneOpen #inside_tabs {
+  display: none !important;
+}
+
+#insideCustomChatTab {
+  position: relative;
+  right: 64px;
+  top: 0;
+  cursor: pointer;
+  width: 64px;
+  font-family: "Gucci Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+#insideCustomChatTab:not(.noanimate) {
+  animation: inside-bounce-in-right 800ms cubic-bezier(0.5, 0, 0, 1);
+}
+
+@keyframes inside-bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+#insideCustomChatTab svg {
+  filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.1));
+  display: block;
+}
+
+#insideCustomChatTab.typingOff svg > * {
+  animation: none !important;
+}
+
+#insideCustomChatTab.typingOff #eMj6yuOe8RN7, #insideCustomChatTab.typingOff #eMj6yuOe8RN8, #insideCustomChatTab.typingOff #eMj6yuOe8RN9 {
+  opacity: 0;
+}
+
+#insideCustomChatTab.typingOff #eMj6yuOe8RN10 {
+  opacity: 1;
+}
+
+#insideCustomChatTab.typingOff:not(.hasCounter):after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  animation: inside-animation-blink 5s linear infinite;
+}
+
+.chatAvailable #insideCustomChatTab.typingOff:not(.hasCounter):after {
+  background: var(--g-color-success, #02B75C);
+}
+
+.chatAvailable #insideCustomChatTab.chat-on-footer.typingOff:not(.hasCounter):after {
+  background: var(--g-color-success-inversed, #02B75C);
+}
+
+@keyframes inside-animation-blink {
+  0%   { opacity: 1; transform: scale(1); }
+  3%   { opacity: 0; transform: scale(0.98); }
+  12%  { opacity: 0; transform: scale(0.98); } 
+  13%  { opacity: 1; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+#insideCustomChatTab .message {
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: all cubic-bezier(0.5, 0, 0, 1) 50ms;
+  transition-delay: 800ms;
+}
+
+#insideCustomChatTab .message .content {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  padding: 12px 20px;
+  margin-left: calc(100% - 63px);
+  transition: all cubic-bezier(0.5, 0, 0, 1) 800ms;
+  display: flex;
+  align-items: center;
+  width: 343px;
+  background: var(--g-color-foreground, #000);
+}
+
+#insideCustomChatTab.chat-on-footer .message .content {
+  background: var(--g-color-background, #fff);
+}
+
+/* Proactive message icons: inline SVG in JS; color drives fill="currentColor" */
+#insideCustomChatTab .message .content .message-bubble-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  line-height: 0;
+  color: var(--g-color-background, #fff);
+}
+
+#insideCustomChatTab .message .content .message-bubble-icon svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+#insideCustomChatTab.chat-on-footer .message .content .message-bubble-icon {
+  color: var(--g-color-foreground, #000);
+}
+
+#insideCustomChatTab .message .content .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 7px;
+  border: 0;
+  background: transparent;
+  line-height: 0;
+  cursor: pointer;
+  color: var(--g-color-background, #fff);
+}
+
+#insideCustomChatTab .message .content .close svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+#insideCustomChatTab.chat-on-footer .message .content .close {
+  color: var(--g-color-foreground, #000);
+}
+
+
+#insideCustomChatTab .message .content .text {
+  color: transparent;
+  line-height: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding: 0 11px;
+  transition: all cubic-bezier(0.5, 0, 0, 1) 800ms;
+}
+
+#insideCustomChatTab.expanded .message {
+  transition-delay: 0ms;
+  opacity: 1;
+}
+
+#insideCustomChatTab.expanded .message .content {
+  margin: 0;
+}
+
+#insideCustomChatTab.expanded .message .content .text {
+  color: var(--g-color-background, #fff);
+  line-height: 16px;
+}
+
+#insideCustomChatTab.chat-on-footer.expanded .message .content .text {
+  color: var(--g-color-foreground, #000);
+}
+
+#insideCustomChatTab .messageCounter {
+  background: var(--g-color-error, #CC0000);
+  border-radius: 10px;
+  width: 16px;
+  height: 16px;
+  right: -4px;
+  top: -4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 9px;
+  letter-spacing: -0.26px;
+  color: #FFFFFF;
+  z-index: 1;
+}
+
+#insideCustomChatTab.chat-on-footer .messageCounter {
+  background: var(--g-color-error-inversed, #CC0000);
+}
+
+[dir="rtl"] #insideCustomChatTab .message {
+  direction: rtl;
+}
+
+[dir="rtl"] #insideCustomChatTab .message .content .close {
+  right: auto;
+  left: 0;
+}

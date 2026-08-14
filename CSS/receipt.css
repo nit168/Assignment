@@ -1,0 +1,325 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    background: #e3e3e3;
+
+    font-family: "Courier New", Courier, monospace;
+
+    color: #222;
+}
+
+
+/* =====================================================
+   RECEIPT
+===================================================== */
+
+.receipt {
+    width: 100%;
+
+    max-width: 390px;
+
+    padding: 40px 32px 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #d2d2d2;
+
+    box-shadow:
+        0 5px 18px rgba(148, 7, 7, 0.12);
+
+    margin: auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.title {
+    text-align: center;
+
+    font-family: "Courier New", Courier, monospace;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.receipt > p:first-of-type {
+    text-align: center;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.receipt hr {
+    border: none;
+
+    border-top: 1px dashed #333;
+
+    margin: 17px 0;
+}
+
+
+/* =====================================================
+   ORDER LIST
+===================================================== */
+
+#orderList {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+
+#orderList li {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto
+        auto
+        auto;
+
+    align-items: center;
+
+    column-gap: 8px;
+
+    padding: 8px 0;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   ITEM NAME
+===================================================== */
+
+#orderList li span:first-child {
+    min-width: 0;
+
+    font-weight: bold;
+
+    text-align: left;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   SIZE
+===================================================== */
+
+#orderList li span:nth-child(2) {
+    color: #555;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   QTY
+===================================================== */
+
+#orderList li span:nth-child(3) {
+    color: #444;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+#orderList li span:nth-child(4) {
+    min-width: 60px;
+
+    text-align: right;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   GENERAL TEXT
+===================================================== */
+
+.receipt p {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    margin: 7px 0;
+}
+
+
+/* =====================================================
+   ITEM COUNT
+===================================================== */
+
+#itemCount {
+    float: right;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   TOTAL
+===================================================== */
+
+#total {
+    float: right;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   PAYMENT
+===================================================== */
+
+.receipt hr + p {
+    font-size: 11px;
+
+    color: #555;
+
+    margin: 5px 0;
+}
+
+
+/* =====================================================
+   THANK YOU
+===================================================== */
+
+.thank {
+    text-align: center;
+
+    margin-top: 22px;
+
+    padding-top: 2px;
+}
+
+
+.thank h3 {
+    text-align: center;
+
+    font-family: "Courier New", Courier, monospace;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 6px;
+}
+
+
+.thank p {
+    text-align: center;
+
+    font-size: 10px;
+
+    color: #666;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+
+    .receipt {
+        max-width: 360px;
+
+        padding: 32px 22px 30px;
+    }
+
+
+    .title {
+        font-size: 21px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    #orderList li {
+        font-size: 11px;
+
+        column-gap: 5px;
+    }
+
+
+    #orderList li span:nth-child(2),
+    #orderList li span:nth-child(3) {
+        font-size: 10px;
+    }
+
+
+    #total {
+        font-size: 15px;
+    }
+
+}

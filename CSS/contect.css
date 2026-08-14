@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  color: #040202;
+  background-color: #f8efef;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  color: #fdfdfd;
+  background: #a56c87;
+  box-shadow: 0 2px 5px rgba(152, 146, 146, 0.1);
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #11060d;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #6a1b9a;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  color: #040202;
+  background-color: #f8efef;
+  line-height: 1.6;
+  
+  /* កែប្រែត្រង់នេះ៖ ឱ្យ Body បង្ហាញជា Flexbox បញ្ឈរ ដើម្បីកុំឱ្យបុកជាមួយ Header */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  color: #fdfdfd;
+  background: #a56c87;
+  box-shadow: 0 2px 5px rgba(152, 146, 146, 0.1);
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #11060d;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #6a1b9a;
+}
+
+/* 💡 ផ្នែកបន្ថែមថ្មី៖ បង្កើតទម្រង់ព័ទ្ធជុំវិញដើម្បីរុញប្រអប់ឱ្យទៅកណ្តាល */
+.main-wrapper {
+    flex: 1; /* ចាប់យកផ្ទៃទំនេរដែលនៅសល់ពី Header ទាំងអស់ */
+    display: flex;
+    justify-content: center; /* រុញទៅកណ្តាល ឆ្វេង-ស្តាំ */
+    align-items: center;     /* រុញទៅកណ្តាល លើ-ក្រោម */
+    padding: 20px;
+}
+
+/* 2. ប្រអប់កុងតេន័រ Checkout */
+.checkout-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 4px; /* កាត់គែមរាងមូលតិចៗ */
+}
+
+/* 3. ចំណងជើង */
+.checkout-container h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+/* 4. ប្លុកក្រុម Form នីមួយៗ */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* 5. ស្លាកឈ្មោះប្រអប់បញ្ចូលទិន្នន័យ (Labels) */
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase; /* អក្សរធំទាំងអស់ */
+    color: #555555;
+}
+
+/* 6. ប្រអប់សម្រាប់វាយបញ្ចូលទិន្នន័យ (Inputs) */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-family: inherit; /* ប្រើ Font ដូច Body */
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+/* ពេលអ្នកប្រើប្រាស់ចុចលើប្រអប់វាយអក្សរ */
+.form-group input:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+/* 7. ប៊ូតុង Submit (THANK YOU / SUBMIT) */
+.submit-btn {
+    width: 100%;
+    background-color: #000000; /* ប៊ូតុងពណ៌ខ្មៅបែបប្រណីត */
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+/* ពេលយកឡប៊ិចទៅដាក់លើប៊ូតុង */
+.submit-btn:hover {
+    background-color: #333333;
+}

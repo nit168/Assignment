@@ -1,0 +1,711 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    font-family: Georgia, serif;
+    color: #040202;
+    background-color: #f8efef;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    width: 100%;
+    min-height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+
+    background: #a56c87;
+    color: white;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #11060d;
+}
+
+
+nav ul {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+}
+
+
+nav ul li {
+    margin-left: 25px;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+nav ul li a:hover {
+    color: #4a1f36;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("../images/banner1.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+
+.hero p {
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-section {
+    text-align: center;
+
+    margin: 35px 0;
+}
+
+
+.search-section input {
+    width: 350px;
+    max-width: 90%;
+
+    padding: 14px 20px;
+
+    border: 2px solid #4d6079;
+    border-radius: 30px;
+
+    outline: none;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    background: white;
+
+    transition: 0.3s;
+}
+
+
+.search-section input:focus {
+    border-color: #a56c87;
+
+    box-shadow:
+        0 0 8px rgba(165, 108, 135, 0.3);
+}
+
+
+/* =====================================================
+   ORDER INFO
+===================================================== */
+
+.order-info {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+.order-info h3 {
+    color: #423a29;
+
+    margin-bottom: 8px;
+}
+
+
+#totalOrder {
+    color: #a56c87;
+
+    font-size: 22px;
+}
+
+
+#message {
+    color: #54b568;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   CONTACT BUTTON
+===================================================== */
+
+.goto-contact-btn {
+    display: block;
+
+    margin: 25px auto 45px;
+
+    padding: 12px 35px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #a56c87;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+
+.goto-contact-btn:hover {
+    background: #6a1b9a;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   BRAND SECTION
+===================================================== */
+
+.brand-section {
+    width: 100%;
+
+    margin: 60px 0;
+}
+
+
+/* =====================================================
+   BRAND TITLE
+===================================================== */
+
+.brand-title {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+
+.brand-title h1 {
+    font-size: 40px;
+
+    color: #4a2c2a;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.brand-title p {
+    font-size: 17px;
+
+    color: #555;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   PRODUCT GRID
+===================================================== */
+
+.menu-container {
+    width: 90%;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================================
+   PRODUCT IMAGE
+===================================================== */
+
+.card img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =====================================================
+   PRODUCT NAME
+===================================================== */
+
+.card h2 {
+    margin: 18px 15px 5px;
+
+    color: #342920;
+
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.description {
+    margin: 8px 20px;
+
+    min-height: 48px;
+
+    color: #545239;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   SIZE BOX
+===================================================== */
+
+.size-box {
+    width: 90%;
+
+    margin: 10px auto 0;
+}
+
+
+.size-box label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #333;
+}
+
+
+/* =====================================================
+   SIZE OPTIONS
+===================================================== */
+
+.size-options {
+    display: flex;
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+
+.size-btn {
+    flex: 1;
+
+    padding: 8px 5px;
+
+    background: #fff;
+
+    color: #333;
+
+    border: 1px solid #d4a72c;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    transition: 0.25s;
+}
+
+
+.size-btn span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+.size-btn:hover {
+    border-color: #bab6a9;
+
+    transform: translateY(-2px);
+}
+
+
+.size-btn.active {
+    background:
+        linear-gradient(
+            135deg,
+            #8ea1c9,
+            #d4d7e5
+        );
+
+    border-color: #c49412;
+
+    color: white;
+
+    box-shadow:
+        0 3px 8px rgba(180, 140, 20, 0.25);
+}
+
+
+.size-btn.active span {
+    color: white;
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.product-price {
+    margin: 15px 0;
+
+    color: #62677d;
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   ORDER BUTTON
+===================================================== */
+
+.order-btn {
+    width: 90%;
+
+    margin: auto auto 20px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #4d6079;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.order-btn:hover {
+    background: #c49a20;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    width: 100%;
+
+    margin-top: 70px;
+
+    padding: 18px;
+
+    background: #a56c87;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   HIDDEN CARD
+   For Search
+===================================================== */
+
+.card.hidden {
+    display: none;
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+
+    nav ul li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+    .hero {
+        min-height: 350px;
+    }
+
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+
+    .hero p {
+        padding: 0 20px;
+
+        font-size: 17px;
+    }
+
+
+    .brand-title h1 {
+        font-size: 32px;
+    }
+
+
+    .menu-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+
+    .card img {
+        height: 260px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+    header {
+        padding: 18px 15px;
+    }
+
+
+    .logo {
+        font-size: 21px;
+    }
+
+
+    nav ul {
+        gap: 5px;
+    }
+
+
+    nav ul li {
+        margin: 0 6px;
+    }
+
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+
+    .hero {
+        min-height: 300px;
+    }
+
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+
+    .hero p {
+        font-size: 15px;
+    }
+
+
+    .menu-container {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .card img {
+        height: 300px;
+    }
+
+
+    .brand-title h1 {
+        font-size: 28px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .brand-title p {
+        font-size: 15px;
+    }
+
+
+    .search-section input {
+        width: 90%;
+    }
+
+}

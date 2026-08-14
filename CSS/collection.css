@@ -1,0 +1,302 @@
+/* ==========================================================================
+   ១. កំណត់ទម្រង់ដើម និងផ្ទៃខាងក្រោយ (Reset & Base Styles)
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  color: #040202;
+  background-color: #f8efef;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  color: #fdfdfd;
+  background: #a56c87;
+  box-shadow: 0 2px 5px rgba(152, 146, 146, 0.1);
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #11060d;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #6a1b9a;
+}
+
+main.container {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==========================================================================
+   ២. ផ្នែកទី១៖ របារប៊ូតុងប្រភេទខាងលើបង្អស់ (Filter Tabs)
+   ========================================================================== */
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap; /* អនុញ្ញាតឱ្យធ្លាក់ជួរដោយស្វ័យប្រវត្តលើអេក្រង់ទូរស័ព្ទ */
+    gap: 15px; /* គម្លាតរវាងប៊ូតុងនីមួយៗ */
+    margin-bottom: 50px; /* បង្កើតគម្លាតយ៉ាងធំ រុញបណ្ដុំកាតរូបភាពទៅខាងក្រោមដាច់ស្រឡះ */
+    width: 100%;
+}
+
+/* ទម្រង់រួមរបស់ប៊ូតុងនីមួយៗ */
+.tab-btn {
+    flex: 1;
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+
+/* ទម្រង់រូបតំណាងក្នុងប៊ូតុង */
+.tab-btn i {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ផលប៉ះពាល់ពេលយកម៉ៅស៍ទៅដាក់លើប៊ូតុង (Hover Effect) */
+.tab-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-2px); /* ងើបឡើងលើបន្តិចមើលទៅរស់រវើក */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tab-btn:active {
+    transform: translateY(0);
+}
+
+/* កូដពណ៌ប៊ូតុងនីមួយៗ */
+.tab-tourism { background-color: #bccc04; }
+.tab-health { background-color: #1793a6; }
+.tab-education-btn { background-color: #cfbd5a; }
+.tab-environment-btn { background-color: #55b796; }
+.tab-charities-btn { background-color: #92c47c; }
+
+/* Fix anchor-based tab buttons */
+a.tab-btn {
+    text-decoration: none;
+    display: flex;
+    color: #ffffff;
+}
+
+a.tab-btn:hover {
+    color: #ffffff;
+    opacity: 0.92;
+}
+
+
+
+/* ==========================================================================
+   ៣. ផ្នែកទី២៖ បណ្ដុំកាតរូបភាពខាងក្រោម (Card Grid Layout)
+   ========================================================================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* បែងចែកជា ៣ជួរលើកុំព្យូទ័រ និង ១ជួរលើទូរស័ព្ទ */
+    gap: 30px; /* គម្លាតរវាងកាតនីមួយៗ */
+    width: 100%;
+}
+
+/* ទម្រង់ប្រអប់កាតនីមួយៗ */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* កាតងើបឡើងបន្តិចពេល Hover */
+}
+
+/* អក្សរប្រភេទនៅផ្នែកក្បាលកាត */
+.card-header {
+    padding: 18px 20px 10px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ពណ៌អក្សរទៅតាមប្រភេទ */
+.text-tourism { color: #bccc04; }
+.text-health { color: #1793a6; }
+.text-education { color: #bca052; }
+.text-environment { color: #439a65; }
+.text-charities { color: #87b96c; }
+
+
+/* ក្របខ័ណ្ឌប្រអប់រូបភាព */
+.card-img-container {
+    width: 100%;
+    height: 290px;
+    overflow: hidden;
+    padding: 0 20px; /* បង្កើតគម្លាតសងខាងឱ្យដូចរូបភាពគំរូ */
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* កាត់តម្រឹមរូបភាពឱ្យសមល្មមមិនឱ្យវៀច */
+    display: block;
+}
+
+/* ខ្លឹមសារព័ត៌មានខាងក្នុងកាត */
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* ជួយឱ្យកាតទាំងអស់មានកម្ពស់ស្មើគ្នាទោះបីជាអក្សរវែងឬខ្លី */
+}
+
+.card-year {
+    font-size: 13px;
+    color: #999999;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #333333;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* ជួររូបតំណាង Social Media ខាងក្រោមបង្អស់ */
+.card-socials {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end; /* រុញរូបតំណាងទៅខាងស្ដាំបង្អស់ */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #005a36; /* ពណ៌បៃតងចាស់របស់ Chip Mong Group */
+    color: #ffffff;
+    border-radius: 50%; /* ធ្វើឱ្យរូបតំណាងមានរាងមូល */
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+/* footer */
+.site-footer {
+    background-color: #53565A; 
+    color: #FFFFFF;
+    padding: 45px 20px 15px 20px;
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.footer-column {
+    flex: 0 1 auto;
+}
+
+.brand-profile {
+    max-width: 250px;
+}
+
+.footer-logo img {
+    height: 35px;
+    width: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.company-address {
+    color: #E2E2E2;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-link {
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.column-heading {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    color: #f7f3f3;
+}
+
+footer{
+    background: #a56c87;
+    color: rgb(247, 245, 242);
+    text-align: center;
+    padding: 10px;
+}
+
+

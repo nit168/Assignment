@@ -1,0 +1,413 @@
+/* ===== GLOBAL STYLES — Applies to ALL pages ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Kantumruy Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== UNIFIED HEADER ===== */
+.main-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 12px 0;
+    background: #005a36;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.main-header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-header .header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo img {
+    height: 38px;
+    width: auto;
+    display: block;
+}
+
+.main-header .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 7px 13px;
+    border-radius: 4px;
+    transition: color 0.25s ease, background-color 0.25s ease;
+    white-space: nowrap;
+}
+
+.main-header .nav-links a:hover {
+    color: #bccc04;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .main-header .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .main-header .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+    .main-header .nav-links a {
+        font-size: 0.78rem;
+        padding: 5px 9px;
+    }
+}
+
+/* ===== UNIFIED FOOTER ===== */
+.site-footer {
+    background-color: #53565A;
+    color: #FFFFFF;
+    padding: 45px 20px 15px 20px;
+    font-family: 'Poppins', 'Kantumruy Pro', sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.site-footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.site-footer .footer-column {
+    flex: 0 1 auto;
+}
+
+.site-footer .brand-profile {
+    max-width: 250px;
+}
+
+.site-footer .footer-logo img {
+    height: 35px;
+    width: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.site-footer .company-address {
+    color: #E2E2E2;
+    margin-bottom: 20px;
+}
+
+.site-footer .contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.site-footer .contact-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.site-footer .contact-link:hover {
+    color: #bccc04;
+}
+
+.site-footer .column-heading {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    color: #f7f3f3;
+}
+
+.site-footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer .footer-links li {
+    margin-bottom: 10px;
+}
+
+.site-footer .footer-links li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.site-footer .footer-links li a:hover {
+    color: #bccc04;
+}
+
+.site-footer .social-links li a i {
+    width: 15px;
+    text-align: center;
+    margin-right: 6px;
+}
+
+.site-footer .map-wrapper {
+    margin-left: auto;
+}
+
+.site-footer .map-embed-container {
+    width: 310px;
+    height: 180px;
+    border: 3px solid #131414;
+    overflow: hidden;
+}
+
+.site-footer .map-embed-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.site-footer .footer-copyright {
+    max-width: 1200px;
+    margin: 35px auto 0 auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: #C0C0C0;
+    font-size: 10px;
+}
+
+@media (max-width: 768px) {
+    .site-footer .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .site-footer .map-wrapper {
+        margin-left: 0;
+        width: 100%;
+    }
+    .site-footer .map-embed-container {
+        width: 100%;
+        max-width: px;
+    }
+}
+
+/* ===== កូដសម្រាប់រុញអត្ថបទ Limited Editions ទៅចំកណ្តាល ===== */
+main.container > p {
+    text-align: center;         /* រុញអក្សរឱ្យទៅចំកណ្តាល */
+    font-size: 1.4rem;          /* ដំឡើងទំហំអក្សរឱ្យធំជាងមុនបន្តិច (អាចដូរបាន) */
+    font-weight: 500;           /* ធ្វើឱ្យអក្សរក្រាស់ល្មមមើលទៅស្អាត */
+    color: #222222;             /* ដាក់ពណ៌ខ្មៅដិតបែបប្រណីត */
+    text-transform: uppercase;  /* ប្តូរអក្សរឱ្យទៅជាអក្សរធំទាំងអស់ (លក្ខណៈ Brand ល្បីៗ) */
+    letter-spacing: 2px;        /* បន្ថែមគម្លាតចន្លោះតួអក្សរនីមួយៗឱ្យមើលទៅទំនើប */
+    margin: 30px 0;             /* បន្ថែមគម្លាតខាងលើ និងខាងក្រោមអក្សរ កុំឱ្យប៉ះគែមពេក */
+    font-family: 'Poppins', sans-serif;
+}
+main.container > p1 {
+    text-align: center;         /* រុញអក្សរឱ្យទៅចំកណ្តាល */
+    font-size: 1.4rem;          /* ដំឡើងទំហំអក្សរឱ្យធំជាងមុនបន្តិច (អាចដូរបាន) */
+    font-weight: 500;           /* ធ្វើឱ្យអក្សរក្រាស់ល្មមមើលទៅស្អាត */
+    color: #222222;             /* ដាក់ពណ៌ខ្មៅដិតបែបប្រណីត */
+    text-transform:lowercase;  /* ប្តូរអក្សរឱ្យទៅជាអក្សរធំទាំងអស់ (លក្ខណៈ Brand ល្បីៗ) */
+    letter-spacing: 2px;        /* បន្ថែមគម្លាតចន្លោះតួអក្សរនីមួយៗឱ្យមើលទៅទំនើប */
+    margin: 30px 0;             /* បន្ថែមគម្លាតខាងលើ និងខាងក្រោមអក្សរ កុំឱ្យប៉ះគែមពេក */
+    font-family:Arial, Helvetica, sans-serif;
+ 
+}
+
+
+
+/* image */
+/* ===== ម៉ូដប្រអប់កាត (Card) ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 30px;
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #333333;
+    padding: 15px;
+    text-align: center;
+}
+
+/* ===== កូដប្រអប់រូបភាពថ្មី - រីកធំពេញប្រអប់ (Cover) ===== */
+.card-img-container {
+    width: 100%;
+    
+    height: 390px;          /* កម្ពស់ប្រអប់ (អាចដំឡើងទៅ 350px បើចង់បានវែងជាងនេះ) */
+    overflow: hidden;       /* លាក់ផ្នែកដែលហៀរ */
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* 🎯 ធ្វើឱ្យរូបភាពរីកធំពេញផ្ទៃប្រអប់កាតតែម្តង គ្មានសល់ចន្លោះទំនេរទេ */
+    object-position: center;/* ឱ្យរូបភាពទឹកអប់ស្ថិតនៅចំកណ្តាលជានិច្ច */
+    transition: transform 0.5s ease;
+}
+
+/* ពេល Hover ឱ្យវា Zoom ចូលតិចៗមើលទៅរស់រវើក */
+.card:hover .card-img {
+    transform: scale(1.05);
+}
+
+/* ផ្នែក Content ខាងក្រោម */
+.card-content {
+    padding: 20px 15px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.card-year {
+    display: block;
+    font-size: 0.85rem;
+    color: #666666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.card-socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-top: 1px solid #f2f2f2;
+    padding-top: 12px;
+}
+
+.social-icon {
+    color: #777777;
+    font-size: 0.85rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+    background: #005a36;
+    color: #ffffff;
+}
+
+
+
+/* map */
+/* ========================================
+   COUTURE SECTION
+======================================== */
+
+.couture-section {
+    width: 100%;
+    padding: 50px 0 80px;
+    box-sizing: border-box;
+}
+
+
+/* Title */
+
+.couture-title {
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #111;
+
+    margin: 0 auto 55px;
+}
+
+
+/* Description */
+
+.couture-description {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto 30px;
+    padding: 0 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+
+    line-height: 1.9;
+    letter-spacing: 2px;
+
+    color: #222;
+}
+
+
+/* Cards */
+
+.couture-section .card-grid {
+    margin-top: 25px;
+}
+
+
+

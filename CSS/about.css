@@ -1,83 +1,57 @@
-/* =====================================================
-   RESET
-===================================================== */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-
-/* =====================================================
-   BODY
-===================================================== */
 
 body {
-    font-family: Georgia, serif;
-    color: #040202;
-    background-color: #f8efef;
-    line-height: 1.6;
+  font-family: 'Georgia', serif;
+  color: #040202;
+  background-color: #f8efef;
+  line-height: 1.6;
 }
 
-
-/* =====================================================
-   HEADER
-===================================================== */
-
+/* Header */
 header {
-    width: 100%;
-    min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  color: #fdfdfd;
+  background: #a56c87;
+  box-shadow: 0 2px 5px rgba(152, 146, 146, 0.1);
+}
 
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #11060d;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #6a1b9a;
+}
+
+main.container {
+    padding: 40px 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 50px;
-
-    background: #a56c87;
-    color: white;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
 }
-
-
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-    color: #11060d;
-}
-
-
-nav ul {
-    display: flex;
-    align-items: center;
-
-    list-style: none;
-}
-
-
-nav ul li {
-    margin-left: 25px;
-}
-
-
-nav ul li a {
-    text-decoration: none;
-
-    color: #ffffff;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-
-nav ul li a:hover {
-    color: #4a1f36;
-}
-
 
 /* =====================================================
    HERO
